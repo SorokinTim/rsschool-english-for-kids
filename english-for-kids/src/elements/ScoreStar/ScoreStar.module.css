@@ -1,0 +1,15 @@
+.star {
+    font-size: 1.5em;
+    margin: 0 1px;
+    cursor: pointer;
+}
+
+.star_success {
+    color: #FFBD07;
+    -webkit-text-stroke: 1px #ffbd07;
+}
+
+.star_error {
+    color: #fff;
+    -webkit-text-stroke: 1px #ffbd07;
+}

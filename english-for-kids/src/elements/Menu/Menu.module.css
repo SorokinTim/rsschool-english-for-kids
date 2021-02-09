@@ -1,0 +1,107 @@
+.container {
+    width: 100%;
+    min-height: 80px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #FFBD07;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background: #fff;
+}
+
+.container__menu {
+    cursor: pointer;
+    font-size: 2em;
+    transition: all 0.3s ease-in-out;
+}
+
+.container__menu:hover {
+    filter: invert(0.4);
+}
+
+.container__brand {
+    flex: 90;
+    padding: 0 20px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 1.8em;
+    color: #1c1c1c;
+}
+
+.switcher {
+    position: relative;
+    display: inline-block;
+    width: 65px;
+    height: 32px;
+}
+
+.switcher__checker {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switcher__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.switcher__slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.switcher__checker:checked + .switcher__slider:after {
+    content: 'Train';
+    color: #fff;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    position: absolute;
+    top: 9px;
+    left: 5px;
+}
+
+.switcher__checker + .switcher__slider:after {
+    content: 'Play';
+    color: #fff;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    position: absolute;
+    top: 9px;
+    right: 5px;
+}
+
+.switcher__checker:checked + .switcher__slider {
+    background-color: #FFBD07;
+}
+
+.switcher__checker:checked + .switcher__slider:before {
+    -webkit-transform: translateX(32px);
+    -ms-transform: translateX(32px);
+    transform: translateX(32px);
+}
+
+@media screen and (max-width: 400px) {
+    .container__brand {
+        font-size: 1.5em;
+        padding: 0 10px;
+    }
+
+    .container__menu {
+        font-size: 1.5em;
+    }
+}

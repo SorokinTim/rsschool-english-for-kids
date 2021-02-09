@@ -1,0 +1,45 @@
+.container {
+    position: fixed;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .6);
+    z-index: 300;
+    cursor: pointer;
+}
+
+.pop-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: auto;
+}
+
+.pop-up__icon {
+    font-size: 5em;
+    color: #ffbd07;
+    cursor: default;
+}
+
+.pop-up__title {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: #1c1c1c;
+    font-size: 1.6em;
+    margin: 10px auto 0;
+}
+
+.pop-up__wrong-answers {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 1em;
+    margin: 5px auto 0;
+    color: #1c1c1c;
+}
